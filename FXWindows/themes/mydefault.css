@@ -1,0 +1,120 @@
+#test {
+  width:100px;
+  height:100px;
+float:left;
+  background:#123;
+}
+.overlay_mydialog img { border: none; }
+
+.overlay_mydialog {
+	background-color: #666666;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.mydialog_nw {
+	width: 9px;
+	height: 23px;
+	background: transparent url(default/top_left.html) no-repeat 0 0;		
+}
+
+.mydialog_n {
+	background: transparent url(default/top_mid.html) repeat-x 0 0;	
+	height: 23px;
+	width: 100%;
+}
+
+.mydialog_ne {
+	width: 9px;
+	height: 23px;
+	background: transparent url(default/top_right.html) no-repeat 0 0;		
+}
+
+.mydialog_e {
+	width: 2px;
+	height: 100%;
+	background: transparent url(default/center_right.html) repeat-y 0 0;	
+}
+
+.mydialog_w {
+	width: 2px;
+	height: 100%;
+	background: transparent url(default/center_left.html) repeat-y 0 0;		
+}
+
+.mydialog_sw {
+	width: 9px;
+	height: 19px;
+	background: transparent url(default/bottom_left.html) no-repeat 0 0;			
+}
+
+.mydialog_s {
+	background: transparent url(default/bottom_mid.html) repeat-x 0 0;		
+	height: 19px;
+	width: 100%;
+}
+
+.mydialog_se {
+	width: 9px;
+	height: 19px;
+	background: transparent url(default/bottom_right.html) no-repeat 0 0;			
+}
+
+.mydialog_sizer {
+	width: 9px;
+	height: 19px;
+	background: transparent url(default/sizer.html) no-repeat 0 0;	
+	cursor:se-resize;	
+}
+
+.mydialog_title {
+	float:left;
+	height:14px;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	width:100%;
+}
+
+.mydialog_content {
+	overflow:auto;
+	font-family: Verdana, Arial, Helvetica;
+	font-size: 12px;
+	text-align:left;
+	background-color:#F7F1CD;
+}
+
+.mydialog_buttons {
+	padding:0px;
+	border:0;
+	font-family:Verdana, Arial, Helvetica; 
+	font-size:8pt; 
+	font-weight:bold; 
+	width:60px; 
+	height:20px; 
+	background:url(default/BtnBG1.html);			
+	color:#000000; 
+	text-align:center;
+}
+
+.top_draggable, .bottom_draggable {
+  cursor:move;
+}
+
+/* DO NOT CHANGE THESE VALUES*/
+.mydialog {
+	display: block;
+ 	font-family: Tahoma, Arial, Sans Serif;
+	position: absolute;
+}
+
+.mydialog * {
+	margin: 0px;
+	padding:0px;
+}
+
+.mydialog table  { border-collapse: collapse; border-spacing: 0; width: 100% }
+.mydialog td, th { padding: 0; }
+
+

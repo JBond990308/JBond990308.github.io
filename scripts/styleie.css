@@ -1,0 +1,8 @@
+fieldset {
+	padding: 10px;
+}
+
+legend { /*	position: absolute; */
+	top: -.5em;
+	left: .75em;
+}
