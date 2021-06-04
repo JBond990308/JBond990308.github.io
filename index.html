@@ -1,0 +1,355 @@
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="scripts/style.css">
+<script>
+  if (document.all) {
+  	document.write('<link rel="stylesheet" href="scripts/styleie.css">');
+  }
+  if (top && top.schema && "" != "" && "" != top.schema) {
+	  top.schema = "";
+	  alert("You have logged in into a different customer account. You will be redirected to the home page now");
+	  top.location.href = "LoginValidate.html";
+  }
+</script>
+
+<SCRIPT language="JavaScript" src="scripts/appscale.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="scripts/Struts-Validator.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="scripts/spellCurrency.js"></SCRIPT>
+
+<script>
+	top.pageDirty = false;
+	errorMessage = "";
+</script>
+
+
+<SCRIPT language="JavaScript">
+  window.onbeforeunload = warnIfDirty;
+  window.onunload=resetPage;
+  window.onbeforeload=resetPage;
+  window.onload=alertError;
+</SCRIPT>
+
+
+<!DOCTYPE HTML PUBLIC "- //W3C //DTD HTML 4.0 Transitional //EN">
+<HTML>
+
+<!-- Mirrored from www.tibs.in/tanqaa/LoginValidate.do by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 May 2021 19:25:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<HEAD>
+<TITLE>Tanqaa Login</TITLE>
+<!-- The below code added to avoid storing Of User Information -->
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="private"/>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="no-store"/>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="must-revalidate"/>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="post-check=0,pre-check=0"/>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<script type="text/javascript" src="scripts/rollups/sha256.js"></script> 
+<!--  End Of Changes -->
+
+<script type="text/javascript">
+
+if (top != window) {
+	top.location.href = "LoginValidate-2.html";
+}
+</script>
+<script type="text/javascript" src="scripts/yui/core.js"></script>
+</HEAD>
+<script type="text/javascript" language="Javascript1.1"> 
+
+<!-- Begin 
+
+     var bCancel = false; 
+
+    function validateLoginForm(form) {                                                                   
+        if (bCancel) 
+      return true; 
+        else 
+ var formValidationResult;
+       formValidationResult = validateRequired(form); 
+     return (formValidationResult == 1);
+   } 
+
+    function LoginForm_required () { 
+     this.a0 = new Array("userId", "User ID entry is required.", new Function ("varName", " return this[varName];"));
+     this.a1 = new Array("companyName", "Company Name entry is required.", new Function ("varName", " return this[varName];"));
+     this.a2 = new Array("userPassword", "Password entry is required.", new Function ("varName", " return this[varName];"));
+     this.a3 = new Array("captchaValue", "Captcha entry is required.", new Function ("varName", " return this[varName];"));
+    } 
+
+
+//End --> 
+</script>
+
+
+<body height="100%" marginwidth=0 marginheight=0 topmargin=0 leftmargin=0>
+<script language="JavaScript">
+function validate(form) {
+	if (!validateLoginForm(form)) {
+    	return false;
+	}	
+	var elem = getElemById("j_username");
+	elem.value = getElemById("userId").value + "#" + getElemById("companyName").value + "#" + getElemById("captchaValue").value;
+	getElemById("j_password").value =getElemById("userPassword").value;
+	var ua = {};
+	ua.air = YAHOO.env.ua.air;
+	ua.caja = YAHOO.env.ua.caja;
+	ua.gecko = YAHOO.env.ua.gecko;
+	ua.ie = YAHOO.env.ua.ie;
+	ua.opera = YAHOO.env.ua.opera;
+	ua.os = YAHOO.env.ua.os;
+	ua.webkit = YAHOO.env.ua.webkit;
+	ua.clientHeight = Dom.getClientRegion().height;
+	ua.clientWidth = Dom.getClientRegion().width;
+	var uaJson = YAHOO.lang.JSON.stringify(ua);
+	Dom.get("uaJson").value = uaJson;
+    return true;	
+}
+function tanqaaLogin() {
+	var randomKey = CryptoJS.lib.WordArray.random(128/8);
+	var tmpPassword = CryptoJS.PBKDF2(getElemById("userPassword").value, randomKey, {keySize:128/32});	
+	getElemById("encryptedPassword").value=tmpPassword;				
+}
+function ObjRemoveReadOnly() {	
+	getElemById("userPassword").removeAttribute('readonly');
+	getElemById("companyName").removeAttribute('readonly');	
+}
+</script>
+	
+	<form style="display: inline; margin: 0px;" method="post" AUTOCOMPLETE="off"
+		action="google.html" name="LoginForm" target="_self" onsubmit="return validate(this)" >		
+		<table width="100%" height=100% cellpadding=0 cellspacing=0 border=0>
+			<tr>
+				<td align=center valign=middle>
+					<table cellpadding=0 cellspacing=0>
+						<tr>
+							<td>
+								<table width=475 cellpadding=0 cellspacing=0>
+									<tr>
+										<td align="left" valign="top"><img
+											src="images/logTopLft.gif" width="6" height="53"></td>
+										<td align="left" valign="top"
+											style="background: url(images/logTopLine.gif) repeat-x; vertical-align: center; height: 53px; width: 133px;">
+											<table height="100%" width="100%" border=0 cellpadding=0
+												cellspacing=0>
+												<tr>
+													<td
+														style="vertical-align: center; width: 133px; height: 53px; line-height: 53px; background: url(images/tanqaa-bg.gif) repeat-y;">
+														<span style="padding-left: 10px; font-size: 25px; font-weight: bold; color: #fff; font-family: verdana, georgia;">Tanqaa</span>
+													</td>
+												</tr>
+											</table>
+
+										</td>
+										<td align="center" valign="top"
+											background="images/LogTopMidBg.gif">
+											<table width="110" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center" valign="top"><img
+														src="images/logTopLine.gif" width="214" height="2"></td>
+												</tr>
+											</table>
+										</td>
+										<td width="116" align="right" valign="top"><img
+											src="images/logLogo.gif" width="116" height="53"></td>
+										<td width="7" align="right" valign="top"><img
+											src="images/logTopRt.gif" width="6" height="53"></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor=edf4fc
+								style="border-left: 2px #617c97 solid; border-right: 2px #617c97 solid;">
+								<table width="100%" cellpadding=0 cellspacing=6>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class=StatusLabel colspan=2 align=center>**AUTHORISED
+											ACCESS ONLY**</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>									
+									<tr>
+										<td align=right><span class="BlueContent">User ID:</span></td>
+										<td><input type="text" name="userId" id="userId" onchange ="ObjRemoveReadOnly();"
+										    autocomplete="off" value=""  
+										    class=textboxwithdepth></td>
+									</tr>
+									<tr>
+										<td align=right><span class="bluecontent">Company
+												Name:</span></td>
+										<td>
+											<input type="text" name="companyName" id="companyName" autocomplete="off" readonly="readonly"											 
+												onfocus ="this.removeAttribute('readonly',0)" value=""
+												class=textboxwithdepth>
+										</td>
+									</tr>																									
+									<tr>
+										<td align=right><span class="bluecontent">Password:</span></td>
+										<td>
+											<input name="userPassword" id="userPassword" autocomplete="off"	readonly="readonly" 											
+											onfocus="this.removeAttribute('readonly',0)" onchange = "tanqaaLogin();" 
+											type="password" value="" class=textboxwithdepth>
+											<input	type="hidden" name="j_username" id="j_username"> 
+											<input	type="hidden" name="j_password" id="j_password"> 
+											<input	type="hidden" name="uaJson" id="uaJson">	
+										</td>
+									</tr>
+									<!-- TO Control Password Cookies -->			
+									<tr style="display: none">
+										<td align=right><span class="bluecontent">Password:</span></td>
+										<td>
+											<input name="encryptedPassword" id="encryptedPassword"	autocomplete="off" readonly
+											type="password" value="" class=textboxwithdepth>										
+										</td>
+									</tr>
+									<!-- End of Changes -->
+									<!-- Captcha Implemented in login page -->
+									<tr>
+										<td align="center" colspan=2 style="padding:6 0 6 0;">
+											<table cellpadding=0 cellspacing=0 border=0>
+											<tr>
+												<td><img src="images/instruction.gif"></td>
+												<td><img src="images/spacer.gif" width=10 height=1></td>
+												<td width=375><span class="BlueContentLgBld" style="font-size: 8.5pt;">Please enter the Captcha characters from the image <br>below, for security reasons</span></td>
+											</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										
+										<td align="right"><img src="fetchCaptcha.html" id="captchaimage"></td>										
+										<td>
+											<table cellpadding=0 cellspacing=0 border=0>
+											<tr>
+												<td><input type="text" class="textboxwithdepth" id="captchaValue" name="captchaValue" style="width:80px;"></td>												
+												<img src="images/spacer.gif" width=5 height=1></td>
+												<td><span class="bluecontent">(not case sensitive)</span></td>												
+											</tr>
+											</table>
+										</td>								
+										
+									</tr>
+									<!-- End of Captcha change -->										
+									<tr>
+										<td align=right>&nbsp;</td>
+										<td>
+											<table width=23% cellpadding=0 cellspacing=0 border=0>
+												<tr>
+													<td align="center">
+														<table cellpadding=0 cellspacing=0 border=0>
+															<tr class="button">
+																<td width="3"><img src="images/btnLft.gif"
+																	width="3" height="20"></td>
+																<td><input type="submit" value="Log in"
+																	name="submit" class="button"></td>
+																<td width="3" align="right"><img
+																	src="images/btnRgt.gif" width="3" height="20"></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										
+										<td align=center colspan=2 class=content><a
+											href="ForgotPassword.html" onclick="top.pageDirty=false;">Forgot
+												User ID, Company Name or Password?</a></td>
+									</tr>								
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table width=475 cellpadding=0 cellspacing=0>
+									<tr>
+										<td width="3" align="left" valign="top"><img
+											src="images/logBotLft.gif" width="7" height="23"></td>
+										<td width="465" bgcolor=ccd1d7 class=content height=23
+											style="border-top: 1px #9b9ca0 solid; border-bottom: 2px #617c97 solid;">&nbsp;&nbsp;&copy;
+											Tandem&nbsp;|&nbsp;<i>Tanqaa can be best viewed in Mozilla Firefox browsers.</i></td>
+										<td width="7" align="right" valign="top"><img
+											src="images/logBotRgt.gif" width="7" height="23"></td>
+									</tr>
+								</table>
+							</td>							
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>	
+	</form>
+	<!-- <input type="hidden" name="tokenCryptotxt" id="tokenCryptotxt" value=""> -->	
+</body>
+<script language="JavaScript">
+	var autofocusid = "userId";
+	
+</script>
+</body>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META CONTENT="no-cache" HTTP-EQUIV="Pragma">
+<META CONTENT="-1" HTTP-EQUIV="Expires">
+</HEAD>
+
+<!-- Mirrored from www.tibs.in/tanqaa/LoginValidate.do by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 May 2021 19:26:16 GMT -->
+</html>
+<style>.active-scroll-bars {z-index:-1;}</style>
+<script type="text/javascript"> 
+	var link_nohandler= window.clientInformation? null : window.undefined; 
+	function link_down() { this.onfocus= this.blur; } 
+	function link_up() { this.onfocus= link_nohandler; } 
+	for (var i= document.links.length; i-->0;) {  
+		document.links[i].onmousedown= link_down; document.links[i].onmouseup= link_up; 
+	}
+
+
+	var elem = getElemById("autoclick");
+	if (elem) {
+		if (elem.onclick) {
+			elem.onclick();
+		}
+		if (document.all) {
+			elem.click();
+		} else {
+			if (elem.target) {
+				changeFrameWindow(elem.target, elem.href);
+			} else {
+				location.href = elem.href;
+			}
+		}
+	}
+
+	if (window.autofocusid != undefined) {
+		elem = getElemById(autofocusid);
+		if (elem) {
+			elem.focus();
+		}
+	}
+</script>
